@@ -98,7 +98,7 @@ void test_delete_3(void)
 }
 
 /* Callback func: Increase int item by 1 or delete item 
- * if it has a value of 3. Adapted from phrase 1 hints*/
+ * if it has a value of 3. */
 static int inc_item(queue_t q, void *data, void *arg)
 {
     int *item_ptr = (int*)data;
@@ -112,8 +112,7 @@ static int inc_item(queue_t q, void *data, void *arg)
     return 0;
 }
 
-/* Iterate 
- * Adapted from phrase 1 hints. */
+/* Iterate */
 void test_iterate(void)
 {
 	int testData[] = {4, 5, 3, 7};
