@@ -5,9 +5,14 @@
  * should get returned to before its child is executed. The way the printing,
  * thread creation and yielding is done, the program should output:
  *
- * thread1
- * thread2
+ * thread4
  * thread3
+ * thread2
+ * thread1
+ * thread7
+ * thread8
+ * thread6
+ * thread5
  */
 
 #include <stdio.h>
