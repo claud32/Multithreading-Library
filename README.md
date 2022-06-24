@@ -8,6 +8,9 @@ Video demonstration available at: https://claud.pro/multithreading/
 * The data structure choice: ```Queue``` which is FIFO. It is good for round-robin thread scheduling logic.
 * Platform: For ```Linux``` in user-level.
 * Relationship among modules: ```uthread API``` is build on top of ```Queue API``` while ```Preemption``` is a necessary added feature on top of ```uthread API```.
+\
+\
+![image](https://claud.pro/content/images/size/w1000/2022/06/Add-a-little-bit-of-body-text.png)
 ### Queue API
 The Queue is implement by ```Doubly Linked List``` with ```FIFO``` rule. I choose this structure because it provides an efficient way to add or remove nodes. ```Doubly Linked List``` also allow us delete a node by simple linking the node before it and the node after it. ```FIFO``` is excatly what I need for thread scheduling.
 ### Queue Testing
