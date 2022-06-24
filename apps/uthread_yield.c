@@ -9,10 +9,6 @@
  * thread3
  * thread2
  * thread1
- * thread7
- * thread8
- * thread6
- * thread5
  */
 
 #include <stdio.h>
@@ -36,8 +32,8 @@ int thread4(void)
 
 int thread3(void)
 {
-	uthread_yield();
 	uthread_join(uthread_create(thread4), NULL);
+	uthread_yield();
 	printf("thread%d\n", uthread_self());
 	return 0;
 }
@@ -53,8 +49,8 @@ int thread2(void)
 int thread1(void)
 {
 	uthread_join(uthread_create(thread2),NULL);
-	uthread_create(thread2);
-	uthread_yield();
+	// uthread_create(thread2);
+	// uthread_yield();
 	printf("thread%d\n", uthread_self());
 	uthread_yield();
 	return 0;
@@ -64,7 +60,7 @@ int main(void)
 {
 	uthread_start(1);
 	uthread_join(uthread_create(thread1),NULL);
-	uthread_create(thread);
+	// uthread_create(thread);
 	uthread_stop();
 
 	return 0;
